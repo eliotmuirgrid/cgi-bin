@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*~
+*.swp
+
+*.o
+*.d
+*.out
+*.log
+*.elf
+*.dbg
+
+.* 
+!.gitignore
+!.gitmodules
