@@ -20,6 +20,16 @@ CUSTOMER_ID="$(urldecode "$(get_param customer_id)")"
 CHANNELS="$(urldecode "$(get_param channels)")"
 IGUANAX="$(urldecode "$(get_param iguanax)")"
 
+if [ ! -d "/home/eliot/customers/$ID" ]; then
+    echo "<html><body>"
+    echo "<h3>License not issued</h3>"
+    echo "<pre>"
+    echo "Unknown customer ID: $ID"
+    echo "</pre>"
+    echo "</body></html>"
+    exit 1
+fi
+
 echo "<html><body>"
 echo "Iguana License Key"
 echo "<pre>"
