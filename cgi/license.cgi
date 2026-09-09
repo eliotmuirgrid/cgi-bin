@@ -20,11 +20,12 @@ CUSTOMER_ID="$(urldecode "$(get_param customer_id)")"
 CHANNELS="$(urldecode "$(get_param channels)")"
 IGUANAX="$(urldecode "$(get_param iguanax)")"
 
-if [ ! -d "/home/eliot/customers/$ID" ]; then
+if [ ! -d "/home/eliot/customers/$CUSTOMER_ID" ]; then
     echo "<html><body>"
     echo "<h3>License not issued</h3>"
     echo "<pre>"
-    echo "Unknown customer ID: $ID"
+    echo "Unknown customer ID: $CUSTOMER_ID"
+    echo "Please request your valid ID from licensing@interfaceware.com"
     echo "</pre>"
     echo "</body></html>"
     exit 1
